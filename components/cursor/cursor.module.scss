@@ -1,0 +1,19 @@
+@import '@/styles/variables';
+
+.cursor__dot{
+    pointer-events:none;
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translate(-50%,-50%);
+    border-radius: 50%;
+    opacity:1;
+    transition: opacity .3s ease-in-out  , transform 0.3s ease-in-out;
+}
+
+
+.cursor__dot{
+    width:17px;
+    height:17px;
+    background-color:$col-pink-800;
+}

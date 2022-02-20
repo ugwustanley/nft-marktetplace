@@ -7,6 +7,7 @@ interface Infts{
     sampleTwo: string,
     sampleThree: string,
 }
+
 const user: Iuser = {
     profile: 'https://res.cloudinary.com/dqzhuopqp/image/upload/v1645365081/samples/jpg_foewhj_afpxrr.avif',
     signature: 'https://res.cloudinary.com/dqzhuopqp/image/upload/v1645365081/samples/Screenshot_2022-02-06_at_16.08.52_izungm_wmho2r.jpg',
@@ -18,4 +19,4 @@ const nfts: Infts = {
     sampleThree: 'https://res.cloudinary.com/dqzhuopqp/image/upload/v1645365081/samples/Jim_placeholder_erelhf.avif',
 }
 
-export { user , nfts}
+export { user , nfts };

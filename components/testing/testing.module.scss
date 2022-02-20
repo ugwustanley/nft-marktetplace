@@ -1,0 +1,10 @@
+@import "@/styles/variables";
+
+@import "@/styles/mixin";
+
+.container{
+
+    h1{
+        color: $col-pink-800;
+    }
+}

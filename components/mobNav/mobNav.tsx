@@ -1,4 +1,6 @@
 import React, { ReactElement } from "react";
+import { motion } from 'framer-motion';
+import { navVariant } from '@/variants'
 import styles from "./mobNav.module.scss";
 import { X } from "phosphor-react";
 
@@ -22,7 +24,11 @@ const MobNav = ({ showNav, setShowNav }: props): ReactElement => {
           <X size={17} />
         </div>
 
-        <li className={styles.mobnav__links}>
+        <motion.li
+           initial={`hidden`}
+           animate={showNav ? `visible` : ``}
+           variants={navVariant()}
+           className={styles.mobnav__links}>
               <ul className={styles.mobnav__link}>Home</ul> 
               <ul className={styles.mobnav__link}>Latest drop</ul> 
               <ul className={styles.mobnav__link}>Auction</ul>  
@@ -31,7 +37,7 @@ const MobNav = ({ showNav, setShowNav }: props): ReactElement => {
               <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Terms of Service</ul>   
               <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Privacy Policy</ul> 
               <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Help</ul>      
-        </li>
+        </motion.li>
 
         <div className={styles.mobnav__credit}>Built with love by stanley</div>
       </div>

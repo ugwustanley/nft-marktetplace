@@ -9,7 +9,7 @@ import { nfts } from '@/mock/media.mock'
 
 const Home: NextPage = () => {
  
-  const [showNav , setShowNav] = useState<boolean>(true)
+  const [showNav , setShowNav] = useState<boolean>(false)
 
   return (
     <div className={''}>

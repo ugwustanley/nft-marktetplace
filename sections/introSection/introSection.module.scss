@@ -1,0 +1,41 @@
+@import '@/styles/variables';
+
+
+.intro{
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:rgba(164, 165, 165, 0.445);
+    top:0;
+    margin:0;
+    padding:0;
+    z-index:2;
+
+    // &__background{
+    //     width: inherit;
+    //     height:inherit;
+    //     margin:0;
+
+    //     &_image{
+    //         position:sticky;
+    //         width:100%;
+    //         height:100%;
+    //         top:0;
+    //         left:0;
+    //         width:inherit;
+    //         height:inherit;
+    //         object-fit: cover;
+    //         object-position: center;
+    //         z-index:-1;
+    //     }
+    //     // &_overlay{
+    //     //     width:100%;
+    //     //     height:100%;
+    //     //     position:absolute;
+    //     //     background:red;
+
+    //     // }
+    // }
+}

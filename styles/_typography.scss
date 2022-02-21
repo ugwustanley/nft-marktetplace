@@ -22,6 +22,18 @@
     font-style: normal;
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('../public/fonts/NeueMontreal-Medium.eot');
+    src: url('../public/fonts/NeueMontreal-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../public/fonts/NeueMontreal-Medium.woff2') format('woff2'),
+        url('../public/fonts/NeueMontreal-Medium.woff') format('woff'),
+        url('../public/fonts/NeueMontreal-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
   
   @font-face {
     font-family: 'Neue Montreal';
@@ -58,3 +70,15 @@
     font-style: italic;
     font-display: swap;
   }
+
+  @font-face {
+    font-family: 'Pragmatica Cond';
+    src: url('../public/fonts/PragmaticaCond-Light.eot');
+    src: url('../public/fonts/PragmaticaCond-Light.eot?#iefix') format('embedded-opentype'),
+        url('../public/fonts/PragmaticaCond-Light.woff2') format('woff2'),
+        url('../public/fonts/PragmaticaCond-Light.woff') format('woff'),
+        url('../public/fonts/PragmaticaCond-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,120 @@
+@import '@/styles/variables';
+@import '@/styles/utils';
+
+.navbar{
+    @extend %page-padding;
+    position:fixed;
+    width:100%;
+    display:flex;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: position 1s;
+    // animation-duration: 3s;
+    // animation-timing-function: ease-in;
+    // animation-iteration-count: 1;
+    // animation-name: showOnScroll;
+
+    @keyframes showOnScroll {
+        from{
+            transform: translateY(-100px);
+            top: -70px;
+            margin-top:200px;
+        }
+        to{
+            transform: translateY(0);
+            top:0;
+            margin-top:0;
+        }
+    }
+    @media(max-width: 760px){
+        background:#fff;
+    }
+    &__links_container{
+        @media (max-width: 760px){
+            display:none;
+        }
+    }
+    &__links{
+        list-style:none;
+        display:flex;
+        justify-content:space-evenly;
+        font-family:inherit;
+        font-weight:500;
+        background:$shadow-dark;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        padding:.8rem .4rem;
+        cursor:pointer;
+        
+     
+    }
+    &__link{
+        padding: 0 1rem;
+        color:#fff;
+        font-size: .9rem;
+        margin:0;
+        border-right:2px solid gray;
+    }
+    &__link:last-child{
+        border-right:0;
+    }
+    &__profile{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:fit-content;
+    }
+    figure{
+        margin:0;
+        padding:0;
+    }
+    &__profile{
+        margin:0;
+    }
+    &__profile_name{
+        padding: 0 1rem;
+        color:#fff;
+        font-size: .9rem;
+        margin:0;
+        background:$shadow-dark;
+        border-radius:10px;
+        margin:0;
+        padding:0;
+        padding:.8rem .8rem;
+        cursor:pointer;
+        @media(max-width: 760px){
+            display:none;
+        }
+    }
+    &__profile_name p{
+        margin:0;
+        font-weight:500;
+        font-family:inherit;
+        font-size:0.95rem;
+        margin-left:0;
+    }
+    &__profile_image{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        margin-right:0.5rem;
+    }
+    &__mobile{
+        display:none;
+        padding:.7rem 1rem;
+        justify-content:space-between;
+        width:calc(100% - 180px);
+        border:1px solid gray;
+        border-radius:10px;
+        font-size:.95rem;
+        cursor:pointer;
+        @media(max-width: 760px){
+            display:flex;
+        }
+    }
+    
+}

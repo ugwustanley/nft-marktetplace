@@ -27,6 +27,7 @@ p {
   margin: 0;
   padding: 0;
   font-family: $font-neue;
+  -webkit-font-smoothing: antialiased;
 }
 
 button{
@@ -34,3 +35,24 @@ button{
     outline:none;
     text-decoration:none;
 }
+
+::-webkit-scrollbar {
+    width: 9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $col-pink-300;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    transition: 1s;
+    background: $shadow-dark;
+    border-radius:10px;
+   
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    transition:1s;
+    background:$col-pink-800;
+    
+  }

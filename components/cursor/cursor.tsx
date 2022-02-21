@@ -1,7 +1,7 @@
 import React, { useRef, useEffect,  ReactElement } from "react";
 import styles from "./cursor.module.scss";
 
-const Cursor = (): ReactElement | null => {
+const Cursor = (): ReactElement => {
    
   const delay = 18;
 
@@ -22,7 +22,7 @@ const Cursor = (): ReactElement | null => {
 
   const toggleCursorVisibility = ():void =>{
       if(cursorVisible.current){
-          dot.current!.style.opacity = '1';
+          dot.current!.style.opacity = '0.8';
       }
       else{
         dot.current!.style.opacity = '0';

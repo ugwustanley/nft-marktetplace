@@ -1,0 +1,37 @@
+@import '@/styles/variables';
+
+.login{
+    cursor:pointer;
+    border-radius:10px;
+    padding:1rem 1.5rem;
+    background:$dynamic-gradient;
+    transition:border-radius .5s;
+    font-size:.90rem;
+    letter-spacing: .35px;
+    font-family:inherit;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    color:#fff;
+    background-size: 200% 100%;
+    animation: colorMove 2s ease-in-out infinite;
+
+    &:hover{
+        border-radius:40px;
+    }
+
+    @keyframes colorMove {
+
+        0%{
+            background-position:center left;
+        }
+        50%{
+            background-position: center right;
+        }
+        100%{
+            background-position: center left;
+        }
+        
+    }
+}
+

@@ -1,28 +1,39 @@
 import React, { ReactElement } from "react";
 import styles from "./mobNav.module.scss";
-import { X } from 'phosphor-react'
+import { X } from "phosphor-react";
 
 type props = {
-    showNav: boolean,
-    setShowNav: React.Dispatch<React.SetStateAction<boolean>>
-}
+  showNav: boolean;
+  setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-const MobNav = ({showNav , setShowNav}: props): ReactElement => {
-
-    
- // {[...Array(60).keys()].map(i => <p>reward</p>)}
+const MobNav = ({ showNav, setShowNav }: props): ReactElement => {
+  // {[...Array(60).keys()].map(i => <p>reward</p>)}
   return (
     <div className={styles.mobnav}>
       <div className={styles.mobnav__main}>
-     
         <div
           className={styles.mobnav__close}
-          onClick={() => {setShowNav(!showNav)}}
+          onClick={() => {
+            setShowNav(!showNav);
+          }}
         >
           <p>Close</p>
           <X size={17} />
         </div>
 
+        <li className={styles.mobnav__links}>
+              <ul className={styles.mobnav__link}>Home</ul> 
+              <ul className={styles.mobnav__link}>Latest drop</ul> 
+              <ul className={styles.mobnav__link}>Auction</ul>  
+              <ul className={styles.mobnav__link}>Marketplace</ul> 
+              <ul className={styles.mobnav__link}>Your profile</ul> 
+              <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Terms of Service</ul>   
+              <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Privacy Policy</ul> 
+              <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Help</ul>      
+        </li>
+
+        <div className={styles.mobnav__credit}>Built with love by stanley</div>
       </div>
     </div>
   );

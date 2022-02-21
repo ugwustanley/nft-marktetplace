@@ -26,7 +26,7 @@
             width: 0px;
         }
     }
-    &__close{
+    &__close, &__credit{
         display:flex;
         padding:.9rem 1rem;
         justify-content:space-between;
@@ -34,5 +34,32 @@
         border-radius:10px;
         font-size:.95rem;
         cursor:pointer;
+    }
+    &__credit{
+        margin-top:1rem;
+        display:block;
+    }
+    &__links{
+        list-style:none;
+        margin:0;
+        padding:0;
+    }
+    &__link{
+        margin:0;
+        padding:0;
+        font-weight:500;
+        font-size:2rem;
+        margin-top:1rem;
+        padding-bottom:1rem;
+        border-bottom:1px solid $col-dark-200;
+    }
+    &__link_small{
+        font-size:.9rem;
+        padding-bottom:.7rem;
+        margin-top:.7rem;
+        border-bottom:none;
+    }
+    &__link:last-child{
+        border-bottom:1px solid $col-dark-200;
     }
 }

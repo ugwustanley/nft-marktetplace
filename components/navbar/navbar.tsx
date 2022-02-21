@@ -4,7 +4,12 @@ import { user } from "@/mock/media.mock";
 import { List } from "phosphor-react";
 import styles from "./navbar.module.scss";
 
-const Navbar = (): ReactElement => {
+type props = {
+  showNav: boolean,
+  setShowNav: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Navbar = ({showNav , setShowNav}: props): ReactElement => {
 
   const navbarRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +57,7 @@ const Navbar = (): ReactElement => {
         </ul>
       </div>
 
-      <div className={styles.navbar__mobile}>
+      <div className={styles.navbar__mobile} onClick={() => setShowNav(!showNav)}>
         <p>Menu</p>
         <List size={22} />
       </div>

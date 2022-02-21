@@ -1,11 +1,15 @@
+import React, { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Cursor from '@/components/cursor/cursor'
+import MobNav from '@/components/mobNav/mobNav'
 import IntroSection from '@/sections/introSection/introSection'
 import RewardSection from '@/sections/rewardSection/rewardSection'
 import { nfts } from '@/mock/media.mock'
 
 const Home: NextPage = () => {
+ 
+  const [showNav , setShowNav] = useState<boolean>(true)
 
   return (
     <div className={''}>
@@ -17,10 +21,11 @@ const Home: NextPage = () => {
         <script src="https://unpkg.com/phosphor-icons"></script>
       </Head>
 
-    
+      { showNav && <MobNav showNav={showNav} setShowNav={setShowNav} /> }
+
        <Cursor />
 
-       <IntroSection />
+       <IntroSection showNav={showNav} setShowNav={setShowNav} />
 
        <RewardSection />
        

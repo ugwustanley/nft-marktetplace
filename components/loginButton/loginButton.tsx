@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { ReactElement} from 'react'
 import styles from './loginButton.module.scss'
 
-const LoginButton = ({}) => {
+const LoginButton = ({}) : ReactElement => {
   return (
     <button className={styles.login}>
         Sign In

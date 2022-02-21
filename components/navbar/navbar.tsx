@@ -13,23 +13,24 @@ const Navbar = (): ReactElement => {
       let previousPosition = window.pageYOffset;
       window.onscroll = function () {
       let currentPosition = window.pageYOffset;
-      if (previousPosition > currentPosition) {
-        navbarRef.current!.style.position= "fixed";
-        navbarRef.current!.style.animation = "showOnScroll 3s ease-in-out 2";
-        
-        
 
-      } else {
+      if (previousPosition > currentPosition) {
+
+        navbarRef.current!.style.position= "fixed";
+        navbarRef.current!.classList?.add(styles['show_on_scroll']);
+        //navbarRef.current!.classList?.remove(styles['hide_on_scroll']);
+      }else {
+
         navbarRef.current!.style.position= "relative";
-        navbarRef.current!.style.animation = "showOnScroll 3s ease-in-out infinite";
-        console.log(navbarRef.current!.style)
+        navbarRef.current!.classList?.remove(styles['show_on_scroll']);
+        //navbarRef.current!.classList?.add(styles['hide_on_scroll']);
       }
       previousPosition = currentPosition;
     };
   }
 
   return (
-    <div ref={navbarRef} className={styles.navbar}>
+    <div ref={navbarRef} className={`${styles.navbar}`}>
       <div className={styles.navbar__profile}>
         <figure>
           <img

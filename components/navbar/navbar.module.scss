@@ -12,25 +12,13 @@
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     transition: position 1s;
-    // animation-duration: 3s;
-    // animation-timing-function: ease-in;
-    // animation-iteration-count: 1;
-    // animation-name: showOnScroll;
-
-    @keyframes showOnScroll {
-        from{
-            transform: translateY(-100px);
-            top: -70px;
-            margin-top:200px;
-        }
-        to{
-            transform: translateY(0);
-            top:0;
-            margin-top:0;
-        }
-    }
+    
     @media(max-width: 760px){
         background:#fff;
+    }
+    @media(max-width: 500px){
+        padding-top:1rem;
+        padding-bottom:1rem;
     }
     &__links_container{
         @media (max-width: 760px){
@@ -105,10 +93,10 @@
     }
     &__mobile{
         display:none;
-        padding:.7rem 1rem;
+        padding:.9rem 1rem;
         justify-content:space-between;
         width:calc(100% - 180px);
-        border:1px solid gray;
+        border:1px solid $col-dark-200;
         border-radius:10px;
         font-size:.95rem;
         cursor:pointer;
@@ -117,4 +105,32 @@
         }
     }
     
+}
+
+.show_on_scroll{
+    animation: showOnScroll .5s ease-out 1;
+   
+
+    @keyframes showOnScroll {
+        from{          
+            top: -70px;           
+        }
+        to{        
+            top:0;            
+        }
+    }
+}
+
+.hide_on_scroll{
+    animation: hideOnScroll .5s ease-out 1;
+   
+
+    @keyframes hideOnScroll {
+        from{          
+            top: 0;           
+        }
+        to{        
+            top:-70px;            
+        }
+    }
 }

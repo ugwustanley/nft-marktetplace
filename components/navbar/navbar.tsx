@@ -26,7 +26,7 @@ const Navbar = ({showNav , setShowNav}: props): ReactElement => {
         //navbarRef.current!.classList?.remove(styles['hide_on_scroll']);
       }else {
 
-        navbarRef.current!.style.position= "relative";
+        navbarRef.current!.style.position= "absolute";
         navbarRef.current!.classList?.remove(styles['show_on_scroll']);
         //navbarRef.current!.classList?.add(styles['hide_on_scroll']);
       }

@@ -3,7 +3,7 @@
 
 .navbar{
     @extend %page-padding;
-    position:fixed;
+    position:absolute;
     width:100%;
     display:flex;
     flex-wrap:nowrap;

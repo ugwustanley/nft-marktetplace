@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+
+.marquee{
+    width:100vw;
+    font-family:inherit;
+    font-size:120px;
+    font-weight:500;
+    color:#fff;
+    letter-spacing: 5px;
+    @media(max-width:1024px){
+        font-size:100px;
+    }
+    @media(max-width:760px){
+        font-size:85px;
+    }
+
+    span{
+        margin-right:1rem;
+        margin-left:1rem;
+    }
+   
+}

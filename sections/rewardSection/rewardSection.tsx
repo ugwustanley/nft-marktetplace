@@ -1,20 +1,15 @@
-import React from 'react'
+import React, {ReactElement} from 'react'
+import Swiper from '@/components/swiper/swiper'
+
 import styles from './rewardSection.module.scss'
 
-const RewardSection = () => {
+const RewardSection = ():ReactElement => {
   return (
-    <div>Reward
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        <p>reward</p>
-        {[...Array(20).keys()].map(i => <p>reward</p>)}
+    <div className={styles.rewards}>
+      <div>Rewards</div>
+
+      <Swiper />
+      
     </div>
   )
 }

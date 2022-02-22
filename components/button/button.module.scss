@@ -1,0 +1,33 @@
+@import '@/styles/variables';
+
+.button{
+    cursor:pointer;
+    border-radius:10px;
+    padding:1rem 1.3rem;
+    background:$dynamic-gradient;
+    transition:border-radius .5s;
+    font-size:.88rem;
+    letter-spacing: .35px;
+    font-family:inherit;
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    color:#fff;
+    background-size: 200% 100%;
+    animation: colorMove 2s ease-in-out infinite;
+    width:220px;
+    display:flex;
+    justify-content: space-between;
+    height:fit-content;
+    @media (max-width: 500px){
+        width:100%;
+        margin-top:1rem;
+    }
+    &:hover{
+        border-radius:40px;
+    }
+
+
+  
+}
+

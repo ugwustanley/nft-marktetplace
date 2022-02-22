@@ -5,10 +5,19 @@ import styles from "./socialSection.module.scss";
 const SocialSection = () => {
   return (
     <div className={styles.social}>
-      <div className={styles.social__info}>
+      <div className={styles.info}>
         <IntroInfo />
       </div>
-      socialSection
+      <div
+          className={styles.social__info}
+        >
+          <p>Social Media</p>
+          <div className={styles.social__links}>
+              <p>Mail</p>
+              <p>Twitter</p>
+              <p>Pinterest</p>
+          </div>
+        </div>
     </div>
   );
 };

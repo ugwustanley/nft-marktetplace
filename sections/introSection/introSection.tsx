@@ -16,15 +16,17 @@ type props = {
 const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
   return (
     //   style={{backgroundImage: `url(${nfts.sampleOne})`}}
-    <motion.div
-      initial={`hidden`}
-      animate={!showNav ? `visible` : ``}
-      variants={introVariant()}
+    <div
       className={styles.intro}
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(${nfts.sampleOne})`,
       }}
     >
+      <motion.div 
+      initial={`hidden`}
+      animate={!showNav ? `visible` : ``}
+      variants={introVariant()}
+      className={styles.intro_box}></motion.div>
       {/* <figure className={styles.intro__background}>
             <img className={styles.intro__background_image} src={nfts.sampleFour} />
             <div className={styles.into__background_overlay}></div>
@@ -37,7 +39,7 @@ const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
           <div className={styles.intro__txt}><IntroInfo /></div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

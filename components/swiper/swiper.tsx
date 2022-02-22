@@ -40,7 +40,7 @@ const Swiper = (): ReactElement => {
   const [refs, setRefs] = useState<any>([I0Ref, I1Ref, I2Ref]);
 
   //console.log(refs)
-  useEffect(() => {refs[index].current.style.borderRadius = "50%";}, [])
+  useEffect(() => {refs[0].current.style.borderRadius = "50%";}, [])
 
   useEffect((): any => {
 
@@ -59,7 +59,8 @@ const Swiper = (): ReactElement => {
       if (index == 2) {
         setIndex(0);
         setActive(items[0]);
-      } else {
+      } 
+      else {
         setIndex(index + 1);
         setActive(items[index + 1]);
       }

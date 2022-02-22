@@ -19,21 +19,15 @@ const navVariant = () => {
   const introVariant = () => {
     return {
       hidden: {
-        // backgroundSize: "300% 100%",
-        // objectSize: 'contain',
-        // backgroundPosition: "bottom center"
-        scale:1.2,
+        scale:1.3,
         y: 100,
       },
   
       visible: {
-        // objectSize:'cover',
         scale:1,
         y:0,
-        // backgroundSize: "cover",
-        // backgroundPosition: "center center",
         transition: {
-          duration: .2,
+          duration: .4,
           ease: "easeOut",
         },
       },

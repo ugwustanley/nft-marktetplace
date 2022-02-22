@@ -4,7 +4,7 @@ import styles from "./swiper.module.scss";
 import { nfts } from "@/mock/media.mock";
 
 const Swiper = (): ReactElement => {
-  const images = [nfts.sampleOne, nfts.sampleTwo, nfts.sampleThree];
+  const images = [nfts.sampleFive, nfts.sampleSix, nfts.sampleSeven];
 
   type Iitem = {
     name: string;
@@ -14,15 +14,15 @@ const Swiper = (): ReactElement => {
   const items: Iitem[] = [
     {
       name: "Julia",
-      image: nfts.sampleOne,
+      image: nfts.sampleFive,
     },
     {
       name: "Jim",
-      image: nfts.sampleTwo,
+      image: nfts.sampleSix,
     },
     {
       name: "Janet",
-      image: nfts.sampleThree,
+      image: nfts.sampleSeven,
     },
   ];
   const [active, setActive] = useState<Iitem>(items[0]);
@@ -40,10 +40,19 @@ const Swiper = (): ReactElement => {
   const [refs, setRefs] = useState<any>([I0Ref, I1Ref, I2Ref]);
 
   //console.log(refs)
+  useEffect(() => {refs[index].current.style.borderRadius = "50%";}, [])
 
   useEffect((): any => {
+
+    
+
     const interval = setInterval(() => {
-     
+
+      items.forEach((item , i) => 
+        {
+          refs[i].current.style.borderRadius = "0";
+        })
+
       refs[index].current.style.borderRadius = "50%";
       swiperRef.current!.classList?.add(styles["bg-anime"]);
 

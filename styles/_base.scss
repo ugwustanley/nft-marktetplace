@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  text-decoration:none !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,6 +29,8 @@ p {
   padding: 0;
   font-family: $font-neue;
   -webkit-font-smoothing: antialiased;
+  text-decoration:none;
+  box-decoration-break:none;
 }
 
 button{

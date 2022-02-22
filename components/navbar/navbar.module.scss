@@ -35,17 +35,15 @@
         border-radius:10px;
         margin:0;
         padding:0;
-        padding:.8rem .4rem;
+        padding:1rem .4rem;
         cursor:pointer;
-        
-     
     }
     &__link{
         padding: 0 1rem;
-        color:#fff;
+        color:$shadow-light;
         font-size: .9rem;
         margin:0;
-        border-right:2px solid gray;
+        border-right:2px solid $col-dark-300;
     }
     &__link:last-child{
         border-right:0;
@@ -65,7 +63,7 @@
     }
     &__profile_name{
         padding: 0 1rem;
-        color:#fff;
+        color:$shadow-light;
         font-size: .9rem;
         margin:0;
         background:$shadow-dark;

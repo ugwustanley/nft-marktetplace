@@ -5,7 +5,9 @@ import { introVariant } from "@/variants";
 import Marqueetxt from "@/components/marqueetxt/marqueetxt";
 import Navbar from "@/components/navbar/navbar";
 import Metric from "@/components/metric/metric";
+import IntroInfo from '@/components/introInfo/introInfo'
 import styles from "./introSection.module.scss";
+
 type props = {
   showNav: boolean;
   setShowNav: React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,7 +22,7 @@ const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
       variants={introVariant()}
       className={styles.intro}
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)), url(${nfts.sampleOne})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(${nfts.sampleOne})`,
       }}
     >
       {/* <figure className={styles.intro__background}>
@@ -32,7 +34,7 @@ const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
         <Marqueetxt />
         <div className={styles.intro__info}>
           <Metric />
-          <Metric />
+          <div className={styles.intro__txt}><IntroInfo /></div>
         </div>
       </div>
     </motion.div>

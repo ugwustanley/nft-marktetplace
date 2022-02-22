@@ -5,6 +5,7 @@ import Cursor from '@/components/cursor/cursor'
 import MobNav from '@/components/mobNav/mobNav'
 import IntroSection from '@/sections/introSection/introSection'
 import RewardSection from '@/sections/rewardSection/rewardSection'
+import SocialSection from '@/sections/socialSection/socialSection'
 import { nfts } from '@/mock/media.mock'
 
 const Home: NextPage = () => {
@@ -26,6 +27,8 @@ const Home: NextPage = () => {
        <Cursor />
 
        <IntroSection showNav={showNav} setShowNav={setShowNav} />
+
+       <SocialSection />
 
        <RewardSection />
        

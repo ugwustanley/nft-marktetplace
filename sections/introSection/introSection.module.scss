@@ -19,13 +19,24 @@
         display:flex;
         flex-direction: column;
         align-self: flex-end;
-        margin-bottom:2rem;
+        margin-bottom:2.5rem;
     }
     &__info{
         @extend %page-padding;
         display:flex;
         justify-content:space-between;
         z-index:inherit;
+        margin-right:1rem;
+        margin-right:1rem;
+        margin-top:1rem;
+        @media(max-width:860px){
+            display:block;
+        }
+    }
+    &__txt{
+        @media(max-width:860px){
+            display:none;
+        }
     }
 
     // &__background{

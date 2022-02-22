@@ -1,0 +1,27 @@
+@import '@/styles/variables';
+
+
+.introinfo{
+ 
+    max-width:330px;
+    height:auto;
+    font-size:1rem;
+    font-family:inherit;
+    color:$shadow-light;
+    font-weight:500;
+    line-height:1.5;
+    @media (max-width:860px){
+        color:$col-dark-400;
+        width:100%;
+        max-width:100%;
+
+    }
+    &__scroll{
+        display:flex;
+        justify-content:space-between;
+        margin-top:1rem;
+        @media (max-width:860px){
+            display:none;
+        }
+    }
+}

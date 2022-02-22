@@ -37,8 +37,8 @@ const Swiper = (): ReactElement => {
               <div className={styles.swiper__pick_links}>
                   {items.map((item:any, index:number) => <img className={styles.swiper__pick_link} src={`${item.image}`}/>)}
               </div>
-              <h2>JUlia</h2>
-              <p>1 Edition</p>
+              <h2>Julia</h2>
+              <p>1 editions</p>
           </div>
       </div>
       <div className={styles.swiper__btns}>

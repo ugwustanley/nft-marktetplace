@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, ReactElement } from "react";
 import Button from "../button/button";
 import styles from "./swiper.module.scss";
+import { motion } from "framer-motion";
 import { nfts } from "@/mock/media.mock";
 
 const Swiper = (): ReactElement => {
@@ -40,18 +41,15 @@ const Swiper = (): ReactElement => {
   const [refs, setRefs] = useState<any>([I0Ref, I1Ref, I2Ref]);
 
   //console.log(refs)
-  useEffect(() => {refs[0].current.style.borderRadius = "50%";}, [])
+  useEffect(() => {
+    refs[0].current.style.borderRadius = "50%";
+  }, []);
 
   useEffect((): any => {
-
-    
-
     const interval = setInterval(() => {
-
-      items.forEach((item , i) => 
-        {
-          refs[i].current.style.borderRadius = "0";
-        })
+      items.forEach((item, i) => {
+        refs[i].current.style.borderRadius = "50%";
+      });
 
       refs[index].current.style.borderRadius = "50%";
       swiperRef.current!.classList?.add(styles["bg-anime"]);
@@ -59,8 +57,7 @@ const Swiper = (): ReactElement => {
       if (index == 2) {
         setIndex(0);
         setActive(items[0]);
-      } 
-      else {
+      } else {
         setIndex(index + 1);
         setActive(items[index + 1]);
       }
@@ -87,7 +84,6 @@ const Swiper = (): ReactElement => {
 
         <div className={styles.swiper__pick_info}>
           <div className={styles.swiper__pick_links}>
-            
             <img
               ref={I0Ref}
               className={styles.swiper__pick_link}
@@ -103,6 +99,28 @@ const Swiper = (): ReactElement => {
               className={styles.swiper__pick_link}
               src={`${items[2].image}`}
             />
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <motion.circle
+                initial={{ pathLength: 0}}
+                animate={{
+                  pathLength: 1.1,
+                  strokeWidth: [0.5, 1, 1.5],
+                }}
+                transition={{ duration: 3, ease: "easeInOut" }}
+                cx="30"
+                cy="30"
+                r="29"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+
           </div>
           <h2>{active.name}</h2>
           <p>1 editions</p>

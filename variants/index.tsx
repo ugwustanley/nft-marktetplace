@@ -33,4 +33,19 @@ const navVariant = () => {
       },
     };
   };
-export { navVariant , introVariant}; 
+
+  const swipeVariant = () => {
+    return {
+      hidden: {
+         pathLength: 0, strokeWidth:1.5
+      },
+  
+      visible: {
+        pathLength: 1.1,  strokeWidth:1.5, 
+        transition: {
+          duration: 5, ease: "easeInOut"
+        },
+      },
+    };
+  };
+export { navVariant , introVariant, swipeVariant}; 

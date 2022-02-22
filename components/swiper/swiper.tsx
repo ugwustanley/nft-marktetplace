@@ -2,35 +2,23 @@ import React, { useState, useEffect, useRef, ReactElement } from "react";
 import Button from "../button/button";
 import styles from "./swiper.module.scss";
 import { motion } from "framer-motion";
-import { nfts } from "@/mock/media.mock";
+import { swipeVariant} from '@/variants/index';
+import items from '@/mock/items.mock'
+
 
 const Swiper = (): ReactElement => {
-  const images = [nfts.sampleFive, nfts.sampleSix, nfts.sampleSeven];
 
-  type Iitem = {
-    name: string;
-    image: string;
-  };
+  // const images = [nfts.sampleFive, nfts.sampleSix, nfts.sampleSeven];
 
-  const items: Iitem[] = [
-    {
-      name: "Julia",
-      image: nfts.sampleFive,
-    },
-    {
-      name: "Jim",
-      image: nfts.sampleSix,
-    },
-    {
-      name: "Janet",
-      image: nfts.sampleSeven,
-    },
-  ];
-  const [active, setActive] = useState<Iitem>(items[0]);
+  const [active, setActive] = useState<any>(items[0]);
 
-  const [index, setIndex] = useState<number>(0);
+  const [index, setIndex] = useState<number>(-1);
+
+  const [roll , setRoll] = useState<boolean>(false)
 
   const swiperRef = useRef<HTMLDivElement>(null);
+
+  const ringRef = useRef<SVGSVGElement>(null);
 
   const I0Ref = useRef<HTMLImageElement>(null);
 
@@ -40,35 +28,60 @@ const Swiper = (): ReactElement => {
 
   const [refs, setRefs] = useState<any>([I0Ref, I1Ref, I2Ref]);
 
-  //console.log(refs)
+  
   useEffect(() => {
     refs[0].current.style.borderRadius = "50%";
   }, []);
 
   useEffect((): any => {
-    const interval = setInterval(() => {
-      items.forEach((item, i) => {
-        refs[i].current.style.borderRadius = "50%";
-      });
 
-      refs[index].current.style.borderRadius = "50%";
+    const interval = setInterval(() => {
+
+      items.forEach((item, i) => {
+        refs[i].current.style.borderRadius = "10px";
+      });
+  
       swiperRef.current!.classList?.add(styles["bg-anime"]);
+     
+      setTimeout(() => {
+        setRoll(true)
+      }, 500);
+
+      if(index == 0){
+        ringRef.current!.style.left = "55.7px";
+      }
+
+      if(index == 1){
+        ringRef.current!.style.left = "115.7px";
+      }
 
       if (index == 2) {
         setIndex(0);
         setActive(items[0]);
-      } else {
+        refs[0].current.style.borderRadius = "50%";
+        ringRef.current!.style.left = "-4.7px";
+        
+      } 
+      
+      else {
         setIndex(index + 1);
         setActive(items[index + 1]);
+        refs[index + 1].current.style.borderRadius = "50%";
+       
       }
 
       setTimeout(() => {
         swiperRef.current!.classList?.remove(styles["bg-anime"]);
+        setRoll(false)
       }, 2000);
-    }, 3000);
+     
+     
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [index]);
+
+
 
   return (
     <div className={styles.swiper}>
@@ -100,6 +113,7 @@ const Swiper = (): ReactElement => {
               src={`${items[2].image}`}
             />
             <svg
+              ref={ringRef}
               width="60"
               height="60"
               viewBox="0 0 60 60"
@@ -107,12 +121,9 @@ const Swiper = (): ReactElement => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <motion.circle
-                initial={{ pathLength: 0}}
-                animate={{
-                  pathLength: 1.1,
-                  strokeWidth: [0.5, 1, 1.5],
-                }}
-                transition={{ duration: 3, ease: "easeInOut" }}
+                initial={`hidden`}
+                animate={!roll ? `visible` : ``}
+                variants={swipeVariant()}
                 cx="30"
                 cy="30"
                 r="29"

@@ -27,7 +27,7 @@
          display:flex;
          justify-content:space-between;
          flex-direction:column;
-         background-size:cover;
+         background-size:100%;
          background-position:center;
          background-repeat:no-repeat;
          @media (max-width: 500px){
@@ -44,7 +44,7 @@
              height:100%;
              z-index:-1;
              background-image:url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645436520/samples/s-4_lqpy8e.jpg');
-             background-size: 120%;
+             background-size: cover;
              background-repeat: no-repeat;
              background-position: center;
              border-radius:10px;
@@ -113,7 +113,7 @@
            background-position: bottom left;
        } 
        to{
-           background-size:120%;
+           background-size:100%;
            background-position:center;
        }
     }

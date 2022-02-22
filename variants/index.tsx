@@ -33,7 +33,7 @@ const navVariant = () => {
         // backgroundSize: "cover",
         // backgroundPosition: "center center",
         transition: {
-          duration: .4,
+          duration: .2,
           ease: "easeOut",
         },
       },

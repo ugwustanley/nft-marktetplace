@@ -35,6 +35,18 @@
           padding-bottom:1.8rem;
           padding-top:1.3rem;
         }
+        &_static{
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            background-image:url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645436520/samples/s-4_lqpy8e.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius:10px;
+        }
          &::after{
              content:'';
              top:0;
@@ -54,7 +66,7 @@
          &_info{
             // background:teal;
             width:fit-content;
-            
+            z-index:2;
             h2{
                color:#fff;
                font-family:inherit;
@@ -90,6 +102,7 @@
              border-radius:30px;
              font-size:.9rem;
              width:fit-content;
+             z-index:2;
          }
      }
     &__btns{
@@ -106,15 +119,13 @@
 .bg-anime{
 
     animation: ngAnime .3s ease-out 1;
-
+    transform-origin: bottom left;
     @keyframes ngAnime {
        from {
-           background-size:30%;
-           background-position: bottom left;
+           transform:scale(0.3);
        } 
        to{
-           background-size:100%;
-           background-position:center;
+           transform:scale(1);
        }
     }
 }

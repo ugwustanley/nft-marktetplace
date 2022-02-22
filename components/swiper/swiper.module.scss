@@ -12,7 +12,7 @@
        margin:auto;
     }
     @media (max-width: 500px){
-        height:580px;
+        height:550px;
         width:100%;
         grid-template-rows:1fr 150px;
         // background:red;
@@ -30,7 +30,11 @@
          background-size:cover;
          background-position:center;
          background-repeat:no-repeat;
-         
+         @media (max-width: 500px){
+          padding:1rem;
+          padding-bottom:1.8rem;
+          padding-top:1.3rem;
+        }
          &::after{
              content:'';
              top:0;
@@ -40,7 +44,7 @@
              height:100%;
              z-index:-1;
              background-image:url('https://res.cloudinary.com/dqzhuopqp/image/upload/v1645436520/samples/s-4_lqpy8e.jpg');
-             background-size: cover;
+             background-size: 120%;
              background-repeat: no-repeat;
              background-position: center;
              border-radius:10px;
@@ -97,4 +101,20 @@
         }
     }
 
+}
+
+.bg-anime{
+
+    animation: ngAnime .3s ease-out 1;
+
+    @keyframes ngAnime {
+       from {
+           background-size:30%;
+           background-position: bottom left;
+       } 
+       to{
+           background-size:120%;
+           background-position:center;
+       }
+    }
 }

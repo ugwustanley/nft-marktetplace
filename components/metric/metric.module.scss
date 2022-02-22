@@ -6,7 +6,7 @@
    max-width:450px;
    height:auto;
    background:transparent;
-   border:.1px solid #f2f2f221;
+   border:1px solid #f2f2f221;
    display:grid;
    // grid-template-columns:200px 100px;
    grid-template-rows:40px 1fr 55px;
@@ -28,7 +28,7 @@
       padding:0 20px;
       color:#fff;
       font-family:inherit;
-      font-weight:600;
+      font-weight:500;
       font-size:.9rem;
 
       span:hover{

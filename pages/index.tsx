@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import type { NextPage } from 'next'
+import { AnimatePresence } from 'framer-motion'
 import Head from 'next/head'
 import Footer from '@/components/footer/footer'
+import Preloader from '@/components/preloader/preloader'
 import Cursor from '@/components/cursor/cursor'
 import MobNav from '@/components/mobNav/mobNav'
 import IntroSection from '@/sections/introSection/introSection'
@@ -12,9 +14,17 @@ import ExploreSection from '@/sections/exploreSection/exploreSection'
 const Home: NextPage = () => {
  
   const [showNav , setShowNav] = useState<boolean>(false)
+  const [removeLoader , setRemoveLoader] = useState<boolean>(false)
+
+  setTimeout(() => {
+    setRemoveLoader(true)
+  }, 5000);
 
   return (
     <div className={''}>
+     <AnimatePresence exitBeforeEnter>
+           {!removeLoader &&  <Preloader />}
+      </AnimatePresence>
 
       <Head>
         <title>Create Next App</title>
@@ -23,9 +33,13 @@ const Home: NextPage = () => {
        
       </Head>
 
+      
+
       { showNav && <MobNav showNav={showNav} setShowNav={setShowNav} /> }
 
        <Cursor />
+
+     
 
        <IntroSection showNav={showNav} setShowNav={setShowNav} />
 

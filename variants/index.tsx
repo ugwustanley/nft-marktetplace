@@ -19,15 +19,16 @@ const navVariant = () => {
   const introVariant = () => {
     return {
       hidden: {
-        scale:1.3,
-        y: 100,
+        scale:1.5,
+        y: 200,
       },
   
       visible: {
         scale:1,
         y:0,
         transition: {
-          duration: .4,
+          duration: .5,
+          delay:5,
           ease: "easeOut",
         },
       },
@@ -48,4 +49,65 @@ const navVariant = () => {
       },
     };
   };
-export { navVariant , introVariant, swipeVariant}; 
+
+  const textVariant = (delay:any) => {
+    return {
+      hidden: {
+         y:20,
+         skewY:4,
+         opacity:0,
+         
+      },
+  
+      visible: {
+        y:0,
+        skewY:0,
+        opacity:1,
+        transition: {
+          delay:delay + 1,
+          duration: .3, ease: "easeInOut"
+        },
+      },
+    };
+  };
+  const divVariant = () => {
+    return {
+      hidden: {
+         opacity:0
+      },
+  
+      visible: {
+        opacity:1,
+        transition: {
+          duration: .5, ease: "easeInOut"
+        },
+      },
+    };
+  };
+
+  
+ const loaderVariant = () => {
+  return {
+    hidden: {
+      opacity: 1
+    },
+    exit: {
+      y: '-100vh',
+      opacity: 1,
+      transition: {
+        duration: .8,
+        ease: "easeInOut",
+      },
+    },
+    visible: {
+      y: '0vh',
+      opacity: 1,
+      transition: {
+        duration: 0,
+        ease: "easeInOut",
+      },
+    },
+  };
+};
+
+export { navVariant , introVariant, swipeVariant, divVariant , loaderVariant, textVariant}; 

@@ -16,8 +16,9 @@
        
     }
     @media(max-width:500px){
-        padding:2rem 1rem;
-        max-height:100px !important;
+        padding:1rem;
+        min-height:0 !important;
+        height:100px !important;
     }
     svg{
         

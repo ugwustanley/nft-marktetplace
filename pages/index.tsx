@@ -6,7 +6,7 @@ import MobNav from '@/components/mobNav/mobNav'
 import IntroSection from '@/sections/introSection/introSection'
 import RewardSection from '@/sections/rewardSection/rewardSection'
 import SocialSection from '@/sections/socialSection/socialSection'
-import { nfts } from '@/mock/media.mock'
+import ExploreSection from '@/sections/exploreSection/exploreSection'
 
 const Home: NextPage = () => {
  
@@ -31,6 +31,8 @@ const Home: NextPage = () => {
        <SocialSection />
 
        <RewardSection />
+
+       <ExploreSection />
        
      
     </div>

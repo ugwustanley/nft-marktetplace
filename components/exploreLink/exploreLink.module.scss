@@ -1,0 +1,46 @@
+.explorelink{
+    display:flex;
+    align-items:flex-end;
+    width:100%;
+    min-height:500px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    font-family:inherit;
+    color:#fff;
+    border-radius:10px;
+    padding:2rem;
+    @media(max-width: 700px){
+        min-height:100px !important;
+        margin-top:1rem;
+    }
+    svg{
+        
+        width:90px  !important;
+        display:block;
+        height:fit-content;
+        cursor:pointer;
+        @media(max-width: 700px){
+            width:60px !important;
+        }
+    }
+    h2{
+        display:block;
+        font-family:inherit;
+        font-size:70px;
+        font-weight:500;
+        line-height:.95;
+        max-width:80%;
+        @media(max-width: 700px){
+           font-size:40px;
+        }
+    }
+    &__info{
+        display:flex;
+        align-items:flex-end;
+        justify-content:space-between;
+        // flex-wrap: wrap;
+        align-self:flex-end;
+        width:100%;
+    }
+}

@@ -85,6 +85,22 @@ const navVariant = () => {
     };
   };
 
+  const moveVariant = (delay:any) => {
+    return {
+      hidden: {
+         
+         opacity:0.5
+      },
+  
+      visible: {
+        opacity:1,
+        transition: {
+          duration: .5, ease: "easeInOut"
+        },
+      },
+    };
+  };
+
   
  const loaderVariant = () => {
   return {

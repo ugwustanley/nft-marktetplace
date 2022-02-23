@@ -12,7 +12,7 @@ const Preloader = ():ReactElement => {
      className={styles.preloader}>
         <div>
             <motion.p variants={textVariant(.3)} >
-                "My aim is to omit everything
+            &apos; My aim is to omit everything
             </motion.p>
             <motion.p variants={textVariant(.4)} >
                 superfluous so that the essential
@@ -21,7 +21,7 @@ const Preloader = ():ReactElement => {
               is shown to the best possible
             </motion.p>
             <motion.p variants={textVariant(.6)} >
-               advantage." - Dieter Rams
+               advantage.&apos; - Dieter Rams
             </motion.p>
 
         </div>

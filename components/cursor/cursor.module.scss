@@ -3,6 +3,7 @@
 .cursor__dot{
     pointer-events:none;
     position:absolute;
+    z-index:99;
     top:0;
     left:0;
     transform:translate(-50%,-50%);

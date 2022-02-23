@@ -10,11 +10,11 @@ const items: Iitem[] = [
     image: nfts.sampleFive,
   },
   {
-    name: "Jim",
+    name: "Janet",
     image: nfts.sampleSix,
   },
   {
-    name: "Janet",
+    name: "Jim",
     image: nfts.sampleSeven,
   },
 ];

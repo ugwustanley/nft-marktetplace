@@ -71,7 +71,7 @@ const Swiper = (): ReactElement => {
       }
 
       setTimeout(() => {
-        swiperRef.current!.classList?.remove(styles["bg-anime"]);
+;        swiperRef.current!.classList?.remove(styles["bg-anime"])
         setRoll(false)
       }, 2000);
      

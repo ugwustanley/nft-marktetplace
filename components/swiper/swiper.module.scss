@@ -8,8 +8,13 @@
     display:grid;
     grid-template-rows:1fr 70px;
     z-index:9;
-    @media (max-width: 1024px){
+    margin-top:1rem;
+    @media (max-width: 1204px){
        margin:auto;
+       margin-top:3rem;
+    }
+    @media (max-width: 700px){
+        
     }
     @media (max-width: 500px){
         height:550px;
@@ -112,7 +117,7 @@
              border-radius:30px;
              font-size:.9rem;
              width:fit-content;
-             z-index:2;
+             z-index:1;
          }
      }
     &__btns{

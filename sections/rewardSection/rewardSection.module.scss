@@ -6,8 +6,99 @@
    display:flex;
    justify-content:space-between;
    padding-bottom:2rem;
-
-   @media (max-width: 1024px){
+   margin-top:5rem;
+   transition:all 1s;
+   @media (max-width: 1204px){
        display:block;
+       margin-top:3rem;
    }
+   &__info {
+       max-width:550px;
+    //    background:red;
+       margin-top:1rem;
+       margin-left:3rem;
+       @media (max-width: 1204px){
+        margin:auto;
+        margin-top:1rem;
+    }
+   }
+   &__heading{
+     border-bottom:2px solid $col-dark-200;
+     padding-bottom:2rem;
+     h2{
+         font-family:inherit;
+         font-size:70px;
+         font-weight:500;
+         color:$col-dark-900;
+         @media (max-width: 700px){
+           font-size:50px;
+         }
+     } 
+     p{
+         font-family:inherit;
+         color:$col-dark-400;
+         font-weight:500;
+         line-height:1.6;
+     } 
+   }
+    &__items{
+        img{
+            width:200px;
+            margin-top:1rem;
+        }
+    }
+   &__item{
+       margin-top:2rem;
+       display:grid;
+       grid-template-columns: 100px 1fr;
+       border-bottom:2px solid $col-dark-200;
+       padding-bottom:2rem;
+       @media (max-width: 700px){
+           grid-template-columns: 1fr;
+       }
+       h2{
+           color:$col-dark-400;
+           font-size:70px;
+           font-family:inherit;
+           font-weight:500;
+           @media (max-width: 700px){
+            display:none;
+           }
+       }
+       h3{
+        font-family:inherit;
+        font-size:30px;
+        font-weight:500;
+        color:$col-dark-900;
+        @media (max-width: 700px){
+            font-size:25px;
+        }
+       }
+       p{
+        font-family:inherit;
+        color:$col-dark-400;
+        font-weight:500;
+        line-height:1.5;
+        margin-top:.7rem;
+        @media (max-width: 700px){
+            font-size:.9rem;
+        }
+       }
+   }
+   &__swiper{
+       position:fixed !important;
+       bottom:0;
+       right:2rem;
+       position:fixed;
+       display:flex;
+       align-self:flex-start;
+       transition:all 1s;
+       @media (max-width:1204px){
+           position:relative !important;
+           right:0;
+           margin:auto;
+       }
+    
+   }
+   
 }

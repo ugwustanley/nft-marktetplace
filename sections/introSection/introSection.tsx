@@ -27,10 +27,7 @@ const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
       animate={!showNav ? `visible` : ``}
       variants={introVariant()}
       className={styles.intro_box}></motion.div>
-      {/* <figure className={styles.intro__background}>
-            <img className={styles.intro__background_image} src={nfts.sampleFour} />
-            <div className={styles.into__background_overlay}></div>
-        </figure> */}
+   
       <Navbar showNav={showNav} setShowNav={setShowNav} />
       <div className={styles.intro__main}>
         <Marqueetxt />

@@ -39,7 +39,7 @@ const MobNav = ({ showNav, setShowNav }: props): ReactElement => {
               <ul className={`${styles.mobnav__link} ${styles.mobnav__link_small}`}>Help</ul>      
         </motion.li>
 
-        <div className={styles.mobnav__credit}>Built with love by stanley</div>
+        <div className={styles.mobnav__credit}>Build by stanley | design by thejelly.io</div>
       </div>
     </div>
   );

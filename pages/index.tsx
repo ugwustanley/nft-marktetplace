@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Footer from '@/components/footer/footer'
 import Cursor from '@/components/cursor/cursor'
 import MobNav from '@/components/mobNav/mobNav'
 import IntroSection from '@/sections/introSection/introSection'
@@ -33,6 +34,8 @@ const Home: NextPage = () => {
        <RewardSection />
 
        <ExploreSection />
+
+       <Footer />
        
      
     </div>

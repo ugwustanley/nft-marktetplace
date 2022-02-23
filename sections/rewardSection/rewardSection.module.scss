@@ -32,6 +32,8 @@
          color:$col-dark-900;
          @media (max-width: 700px){
            font-size:50px;
+           line-height:.95;
+           margin-bottom:.5rem;
          }
      } 
      p{

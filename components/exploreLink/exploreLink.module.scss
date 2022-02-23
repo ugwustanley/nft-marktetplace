@@ -16,7 +16,7 @@
        
     }
     @media(max-width:500px){
-        padding:1rem;
+        padding:2rem 1rem;
         max-height:100px !important;
     }
     svg{
@@ -53,5 +53,8 @@
         // flex-wrap: wrap;
         align-self:flex-end;
         width:100%;
+        @media(max-width:500px){
+            align-items: center;
+        }
     }
 }

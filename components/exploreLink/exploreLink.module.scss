@@ -18,7 +18,7 @@
     @media(max-width:500px){
         padding:1rem;
         min-height:0 !important;
-        height:100px !important;
+        height:120px !important;
     }
     svg{
         
@@ -54,8 +54,10 @@
         // flex-wrap: wrap;
         align-self:flex-end;
         width:100%;
+        // background-color: red;
         @media(max-width:500px){
             align-items: center;
+            align-self: center;
         }
     }
 }

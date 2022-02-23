@@ -70,16 +70,20 @@ const navVariant = () => {
       },
     };
   };
-  const divVariant = () => {
+  const divVariant = (delay:any) => {
     return {
       hidden: {
-         opacity:0
+         opacity:0,
+         y:10,
       },
   
       visible: {
         opacity:1,
+        y:0,
         transition: {
-          duration: .5, ease: "easeInOut"
+           duration: .4,
+           delay:delay + 1,
+           ease: "easeInOut"
         },
       },
     };
@@ -126,4 +130,4 @@ const navVariant = () => {
   };
 };
 
-export { navVariant , introVariant, swipeVariant, divVariant , loaderVariant, textVariant}; 
+export { navVariant , introVariant, moveVariant,  swipeVariant, divVariant , loaderVariant, textVariant}; 

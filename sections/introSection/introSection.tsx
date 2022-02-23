@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { nfts } from "@/mock/media.mock";
 import { motion } from "framer-motion";
-import { introVariant } from "@/variants";
+import { introVariant , moveVariant } from "@/variants";
 import Marqueetxt from "@/components/marqueetxt/marqueetxt";
 import Navbar from "@/components/navbar/navbar";
 import Metric from "@/components/metric/metric";
@@ -24,17 +24,27 @@ const IntroSection = ({ showNav, setShowNav }: props): ReactElement => {
     >
       <motion.div 
       initial={`hidden`}
-      animate={!showNav ? `visible` : ``}
+      animate={`visible`}
       variants={introVariant()}
       className={styles.intro_box}></motion.div>
    
       <Navbar showNav={showNav} setShowNav={setShowNav} />
       <div className={styles.intro__main}>
-        <Marqueetxt />
-        <div className={styles.intro__info}>
-          <Metric />
-          <div className={styles.intro__txt}><IntroInfo /></div>
-        </div>
+          
+              <Marqueetxt />
+          
+        <motion.div
+        initial={`hidden`}
+        animate={`visible`}
+         variants={moveVariant(.38)}
+         className={styles.intro__info}>
+ 
+              <Metric />
+         
+          <motion.div variants={moveVariant(.59)} className={styles.intro__txt}>
+            <IntroInfo />
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

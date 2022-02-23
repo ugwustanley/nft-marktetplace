@@ -58,7 +58,15 @@ const navVariant = () => {
          opacity:0,
          
       },
-  
+      exit: {
+        y: '-20',
+        skewY:4,
+        opacity:0,
+        transition: {
+          duration: 4,
+          ease: "easeOut",
+        },
+      },
       visible: {
         y:0,
         skewY:0,
@@ -92,14 +100,17 @@ const navVariant = () => {
   const moveVariant = (delay:any) => {
     return {
       hidden: {
-         
+         y:300,
          opacity:0.5
       },
   
       visible: {
         opacity:1,
+        y:0,
         transition: {
-          duration: .5, ease: "easeInOut"
+          delay:delay + 5,
+          duration: .6, 
+          ease: "easeOut"
         },
       },
     };

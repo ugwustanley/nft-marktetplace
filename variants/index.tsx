@@ -28,7 +28,7 @@ const navVariant = () => {
         y:0,
         transition: {
           duration: .5,
-          delay:5,
+          delay:7,
           ease: "easeOut",
         },
       },
@@ -53,13 +53,13 @@ const navVariant = () => {
   const textVariant = (delay:any) => {
     return {
       hidden: {
-         y:20,
-         skewY:4,
+         y:50,
+         skewY:6,
          opacity:0,
          
       },
       exit: {
-        y: '-20',
+        y: -50,
         skewY:4,
         opacity:0,
         transition: {
@@ -72,7 +72,7 @@ const navVariant = () => {
         skewY:0,
         opacity:1,
         transition: {
-          delay:delay + 1,
+          delay:delay + 2,
           duration: .3, ease: "easeInOut"
         },
       },
@@ -108,7 +108,7 @@ const navVariant = () => {
         opacity:1,
         y:0,
         transition: {
-          delay:delay + 5,
+          delay:delay + 7,
           duration: .6, 
           ease: "easeOut"
         },

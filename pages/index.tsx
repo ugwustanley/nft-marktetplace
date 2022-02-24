@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
   setTimeout(() => {
     setRemoveLoader(true)
-  }, 5000);
+  }, 7000);
 
   return (
     <div className={''}>
